@@ -1,0 +1,14 @@
+{
+    "AwsTemplateFormationVersion": "2010-09-09",
+    "Description": "classroom activity done on march25",
+    "resource": {
+        "mys3bucket": {
+            "type": "aws::s3::bucket",
+            "properties": {
+                "bucket name": "qt s3 bucket from cf 250323"
+            }
+        }
+    }
+}
+
+

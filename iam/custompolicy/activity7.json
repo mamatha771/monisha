@@ -1,0 +1,23 @@
+{
+    "Version":"2012-10-17",
+    "Statement":{
+        "Effect": "Allow",
+        "Action": ["Ec2:*"],
+        "Resource":"*"
+    }
+    {
+        "Effect":"Deny",
+        "Action":["ec2:RunInstance"],
+        "Resource":"*",
+        "Condition": {
+            "stringNotequals": {
+                "ec2:region":"us-east-1",
+                "ec2:Instancetype":"t2.micro"
+            }
+        }
+            
+            
+
+ 
+    }
+}

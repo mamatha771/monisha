@@ -1,0 +1,20 @@
+{
+    "Version":"2012-10-17",
+    "Statement": [
+        {
+            "Effect":"Allow",
+            "Action":["ec2:*","cloudewatching:Describe",
+            "autoscalling:Describe",
+            "elasticloadbalancing:Describe"],
+            "Resource":"*"
+        }
+        {
+            "Effect":"Deny",
+            "Action":["ec2:TerminateInstance"],
+            "Resource":"*",
+            "Condition": {
+                "Stringnotequals":{"ec2:Instancetype":"t2.micro"}
+            }
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Versio" : "202-10-17",
+    "Statement" : [
+        {
+            "Effect" : ["ec2:DescribeInstance","ec2:StartInstances","ec2:StopInstances"],
+            "Action" : "Allow",
+            "Resource" : ["arn:aws:ec2:us-west-2:ec2:*:instance/*"]
+        }
+        {
+            "Effect" :["ec2:DescribeInstance"],
+            "Action" :"Allow",
+            "Resource" :["*"]
+        }
+    ]
+}
